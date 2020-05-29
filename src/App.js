@@ -1,72 +1,28 @@
 import React, { Component } from "react";
 import "./App.css";
-import Test1 from "./Composant/test1";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Contacts from "./Composant/Contacts";
-import ContactInput from "./Composant/ContactInput"
+import Get from "./Components/GetUser";
+import Add from "./Components/AddUser";
+import Delete from "./Components/DeleteUser";
+import Put from "./Components/UpDate";
 
-export class App extends Component {
-  state = {
-    profil: [
-      {
-        id: 1,
-        nom: "Salim",
-        age: "33",
-      },
-      {
-        id: 2,
-        nom: "Sarah",
-        age: "35",
-      },
-      {
-        id: 3,
-        nom: "Soumaya",
-        age: "41",
-      },
-    ],
-  };
-
-  jeune = () => {
-    let newAge = this.state.profil.map((el) => {
-      el.age -= 5;
-      return el.age;
-    });
-    this.setState({ newAge });
-  };
-
+class App extends Component {
   render() {
-    /*
-    setTimeout(() => {
-      this.setState({
-        profil: [
-          {
-            id: 1,
-            nom: "Sami",
-            age: "33",
-          },
-          {
-            id: 2,
-            nom: "Sahar",
-            age: "35",
-          },
-          {
-            id: 3,
-            nom: "Soumaya",
-            age: "41",
-          },
-        ],
-      });
-    }, 3600);
-*/
-
     return (
       <div className="App">
-        <h1>Bienvenue</h1>
-        <Test1 profil={this.state.profil} />
-        <button onClick={this.jeune}>Rajeunir</button>
-       
-        <Contacts />
-        <ContactInput />
+        <header className="App-header">
+          <h1 className="App-title">Todo React-Axios App</h1>
+        </header>
+
+        <h2>Get User</h2>
+        <Get />
+        <h2>Add User</h2>
+        <Add />
+
+        <h2>Delete User</h2>
+        <Delete />
+
+        <h2> User UpDate</h2>
+        <Put />
       </div>
     );
   }
