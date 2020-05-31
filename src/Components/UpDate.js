@@ -4,7 +4,7 @@ import axios from "axios";
 
 class Put extends Component {
   state = {
-    persons: ""
+    data: ""
   }
 
   
@@ -12,9 +12,9 @@ class Put extends Component {
   upDate() {
     const data = {
         "id": "1",
-        "name": "Amri Salim",
+        "title": "jsx",
       }
-    axios.put(`https://jsonplaceholder.typicode.com/post/1`, data)
+    axios.put(`http://localhost:3000/posts`, data)
       .then(data => {
         console.log(data);
       })

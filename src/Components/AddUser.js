@@ -4,11 +4,11 @@ import axios from "axios";
 
 class Add extends Component {
   state = {
-    name: '',
+    title: '',
   }
 
   handleChange = event => {
-    this.setState({ name: event.target.value });
+    this.setState({ title: event.target.value });
   }
 
   // POST Requests
@@ -17,10 +17,10 @@ class Add extends Component {
     event.preventDefault();
 
     const user = {
-      name: this.state.name
+      title: this.state.title
     };
 
-    axios.post(`https://jsonplaceholder.typicode.com/users`, { user })
+    axios.post(`http://localhost:3000/posts`, { user })
     .then(res => {
       console.log(res);
       console.log(res.data);
@@ -36,7 +36,7 @@ class Add extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             User Name:
-            <input type="text" name="name" onChange={this.handleChange} />
+            <input type="text" name="title" onChange={this.handleChange} />
           </label>
           <button type="submit">Add</button>
         </form>

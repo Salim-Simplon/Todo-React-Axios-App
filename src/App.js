@@ -12,12 +12,10 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Todo React-Axios App</h1>
         </header>
-
-        <h2>Get User</h2>
-        <Get />
         <h2>Add User</h2>
         <Add />
-
+        <h2>Get User</h2>
+        <Get />
         <h2>Delete User</h2>
         <Delete />
 
