@@ -4,7 +4,9 @@ import axios from "axios";
 
 class Put extends Component {
   state = {
-    data: ""
+    data: "",
+    id: ""
+
   }
 
   
@@ -14,7 +16,7 @@ class Put extends Component {
         "id": "1",
         "title": "jsx",
       }
-    axios.put(`http://localhost:3000/posts`, data)
+    axios.put(`http://localhost:3000/posts/${this.state.id}`, data)
       .then(data => {
         console.log(data);
       })

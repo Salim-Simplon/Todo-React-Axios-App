@@ -15,10 +15,11 @@ export default class Delete extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    axios.delete(`http://localhost:3000/posts${this.state.id}`)
+    axios.delete(`http://localhost:3000/posts/${this.state.id}`)
       .then(res => {
         console.log(res);
         console.log(res.data);
+        window.location.reload()
       })
   }
 

@@ -1,38 +1,37 @@
-
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import axios from "axios";
 
 class Add extends Component {
   state = {
-    title: '',
-  }
+    title: "",
+  };
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({ title: event.target.value });
-  }
+  };
 
   // POST Requests
 
-  handleSubmit = event => {
-    event.preventDefault();
+  handleSubmit = (e) => {
+    e.preventDefault();
 
-    const user = {
-      title: this.state.title
-    };
-
-    axios.post(`http://localhost:3000/posts`, { user })
-    .then(res => {
-      console.log(res);
-      console.log(res.data);
-    })
-  }
     
+
+    axios
+      .post(`http://localhost:3000/posts`, this.state )
+      .then((res) => {
+        console.log(res);
+        console.log(res.title);
+        window.location.reload()
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   render() {
     return (
       <div className="Get">
-        
-        
         <form onSubmit={this.handleSubmit}>
           <label>
             User Name:
@@ -43,6 +42,6 @@ class Add extends Component {
       </div>
     );
   }
-};
+}
 
 export default Add;

@@ -1,19 +1,6 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2,
-      "title": "javascript"
-    },
-    {
-      "id": 3,
-      "title": "react"
-    },
-    {
       "id": 4,
       "title": "redux"
     },
@@ -22,52 +9,8 @@
       "title": "nodejs"
     },
     {
-      "user": {
-        "name": "salim"
-      },
-      "id": 6
-    },
-    {
-      "user": {
-        "name": "salim"
-      },
+      "title": "cc",
       "id": 7
-    },
-    {
-      "user": {
-        "name": "salim"
-      },
-      "id": 8
-    },
-    {
-      "user": {
-        "title": "hi"
-      },
-      "id": 9
-    },
-    {
-      "user": {
-        "title": "hi"
-      },
-      "id": 10
-    },
-    {
-      "user": {
-        "title": "hi"
-      },
-      "id": 11
-    },
-    {
-      "user": {
-        "title": "hi"
-      },
-      "id": 12
-    },
-    {
-      "user": {
-        "title": "hi"
-      },
-      "id": 13
     }
   ]
 }
